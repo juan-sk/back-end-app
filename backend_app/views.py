@@ -1,3 +1,5 @@
+
+from datetime import datetime
 from django.http import HttpResponse
 
 class a:
@@ -39,40 +41,19 @@ def cierre(response):
         <div class="row">
 
 
-            <h1 style="text-align: center;">Hola Mundo </h1>
+           <h1  style="text-align: center;">Hola Mundo </h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur libero, soluta eum animi pariatur
                 distinctio ipsam, officiis accusamus cumque nobis, facere laboriosam nihil doloremque maxime consectetur
                 similique accusantium amet inventore.</p>
 
-            <div class="alert alert-primary" role="alert">
-                A simple primary alert—check it out!
-            </div>
-            <div class="alert alert-secondary" role="alert">
-                A simple secondary alert—check it out!
-            </div>
-            <div class="alert alert-success" role="alert">
-                A simple success alert—check it out!
-            </div>
-            <div class="alert alert-danger" role="alert">
-                A simple danger alert—check it out!
-            </div>
-            <div class="alert alert-warning" role="alert">
-                A simple warning alert—check it out!
-            </div>
-            <div class="alert alert-info" role="alert">
-                A simple info alert—check it out!
-            </div>
-            <div class="alert alert-light" role="alert">
-                A simple light alert—check it out!
-            </div>
-            <div class="alert alert-dark" role="alert">
-                A simple dark alert—check it out!
-            </div>
+   <h1> La hora es:"""+ datetime.now().__str__()+"""
+
+
+       <h1>
         </div>
     </div>
 </body>
 
 </html>
     """
-    
     return HttpResponse(texto)
