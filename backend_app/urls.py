@@ -16,11 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 
-from backend_app.views import index,error,cierre
+# from backend_app.views import index,error,cierre, inicio
+from . import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hola/',index),
-    path('pagina/',cierre),
-    path('/**',error),
+    path("",views.inicio),
+    # path('hola/',index),
+    # path('pagina/',cierre),
+    # path('/**',error),
     
 ]

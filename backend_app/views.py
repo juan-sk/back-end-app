@@ -1,10 +1,19 @@
 
 from datetime import datetime
 from django.http import HttpResponse
+from django.shortcuts import render
 
 class a:
+
+
+
     def __init__(self):
         self.nombre = "hola"
+
+def inicio(request):
+    print (request)
+    return render(request,"index.html")
+
 def index(request):
     # return HttpResponse(a())
     return HttpResponse("hola mundo")
