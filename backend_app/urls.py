@@ -21,6 +21,8 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('formulario', views.formulario),
+    path("respuesta",views.respuesta),
     path("",views.inicio),
     # path('hola/',index),
     # path('pagina/',cierre),

@@ -3,6 +3,8 @@ from datetime import datetime
 from django.http import HttpResponse
 from django.shortcuts import render
 
+from backend_app.dominio.clases.persona import Persona
+
 class a:
 
 
@@ -66,3 +68,11 @@ def cierre(response):
 </html>
     """
     return HttpResponse(texto)
+
+def formulario(req):
+    return render(req,"formulario.html")
+def respuesta(req):
+    nombre = req.GET["txtnombre"]
+    direccion= req.GET["txtdireccion"]
+    p = Persona(nombre,direccion)
+    return render(req,'respuesta.html',{'p':p})
