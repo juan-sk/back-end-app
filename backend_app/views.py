@@ -72,7 +72,7 @@ def cierre(response):
 def formulario(req):
     return render(req,"formulario.html")
 def respuesta(req):
-    nombre = req.GET["txtnombre"]
-    direccion= req.GET["txtdireccion"]
+    nombre = req.POST["txtnombre"]
+    direccion= req.POST["txtdireccion"]
     p = Persona(nombre,direccion)
     return render(req,'respuesta.html',{'p':p})
